@@ -261,6 +261,24 @@ class Program
         } while (again == "Y");
     }
 
+  //Edit Student
+  static void EditStudent()
+    {
+        Console.WriteLine("\n===== EDIT STUDENT =====");
+
+        Console.Write("Enter student number: ");
+        string studentNumber = Console.ReadLine() ?? "";
+
+        Student student = phonebook.FindStudent(studentNumber);
+
+        if (student == null)
+        {
+            Console.WriteLine("Student number does not exist!");
+            return;
+        }
+
+       
+
 
             
 
