@@ -276,7 +276,27 @@ class Program
             Console.WriteLine("Student number does not exist!");
             return;
         }
+        while (true)
+        {
+            Console.WriteLine("\nHere is the existing information:");
+            Console.WriteLine(
+                $"{student.FirstName} {student.Surname} is a " +
+                $"{student.Occupation}. His/Her number is " +
+                $"{student.CountryCode}-{student.AreaCode}-{student.PhoneNumber}");
 
+            Console.WriteLine("\nWhich information do you wish to change?");
+
+            Console.WriteLine("[1] Student number");
+            Console.WriteLine("[2] Surname");
+            Console.WriteLine("[3] Gender");
+            Console.WriteLine("[4] Occupation");
+            Console.WriteLine("[5] Country code");
+            Console.WriteLine("[6] Area code");
+            Console.WriteLine("[7] Phone number");
+            Console.WriteLine("[8] None - Go back to main menu");
+
+            Console.Write("Enter choice: ");
+            string choice = Console.ReadLine() ?? "";
        
 
 
