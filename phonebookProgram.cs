@@ -160,6 +160,15 @@ class Program
         }
     }
 
+   private static int ReadValidCountryCode(string prompt)
+     while (true)
+        {
+            int code = ReadInt(prompt);
+
+            if (Country.IsValidCountryCode(code))
+            {
+                return code;
+            }
           
 
   
