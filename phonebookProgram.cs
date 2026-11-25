@@ -28,4 +28,14 @@ class Student
         PhoneNumber = phoneNumber;
     }
 
+    public void Display()
+    {
+      Console.WriteLine(
+        $"{Surname}, {Firstname}, with student number" +
+          $"{StudentNumber}, is a {Occupation}. " +
+            $"His/Her phone number is {CountryCode}-" +
+            $"{AreaCode}-{PhoneNumber}");
+    }
+}
+
   
