@@ -375,7 +375,26 @@ class Program
             }
         }
     }
-       
+
+
+
+  // Search Student by Country
+   static void SearchStudents()
+    {
+        Console.WriteLine("\n===== SEARCH BY COUNTRY =====");
+
+        Console.WriteLine("[1] Philippines");
+        Console.WriteLine("[2] Thailand");
+        Console.WriteLine("[3] Singapore");
+        Console.WriteLine("[4] Indonesia");
+        Console.WriteLine("[5] Malaysia");
+        Console.WriteLine("[6] ALL");
+        Console.WriteLine("[0] No More");
+
+        HashSet<int> selectedCountries = new HashSet<int>();
+
+        bool allCountries = false;
+        int choiceNumber = 1;
 
 
             
