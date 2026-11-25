@@ -1,6 +1,6 @@
 using System;
 using System.Collection.Generic;
-using System.Ling;
+using System.Linq;
 using System.Numeric;
 
 class Student
