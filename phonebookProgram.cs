@@ -179,6 +179,36 @@ class Program
         }
     }
 
+  //Store Student
+  static void StoreStudent()
+    {
+        string again;
+
+        do
+        {
+            Console.WriteLine("\n===== STORE STUDENT =====");
+
+            string studentNumber;
+
+            while (true)
+            {
+                Console.Write("Enter student number: ");
+                studentNumber = Console.ReadLine() ?? "";
+
+                if (string.IsNullOrWhiteSpace(studentNumber))
+                {
+                    Console.WriteLine("Student number cannot be empty.");
+                }
+                else if (phonebook.StudentNumberExists(studentNumber))
+                {
+                    Console.WriteLine("Student number already exists.");
+                }
+                else
+                {
+                    break;
+                }
+            }
+
             
 
 
