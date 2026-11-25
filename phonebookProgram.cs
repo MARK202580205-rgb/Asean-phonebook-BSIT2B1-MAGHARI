@@ -143,7 +143,9 @@ class Program
             }
         }
     }
-   private static int ReadInt(string prompt)
+ 
+  //Read INTEGER
+  private static int ReadInt(string prompt)
      {
         while (true)
         {
