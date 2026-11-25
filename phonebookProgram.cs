@@ -161,6 +161,7 @@ class Program
     }
 
    private static int ReadValidCountryCode(string prompt)
+   {
      while (true)
         {
             int code = ReadInt(prompt);
@@ -168,7 +169,17 @@ class Program
             if (Country.IsValidCountryCode(code))
             {
                 return code;
-            }
+            }  
+       Console.WriteLine(
+                "Invalid ASEAN country code. Allowed codes: " +
+                "60 (Malaysia), 62 (Indonesia), 63 (Philippines), " +
+                "65 (Singapore), 66 (Thailand).");
+        }
+    }
+
+            
+
+
           
 
   
