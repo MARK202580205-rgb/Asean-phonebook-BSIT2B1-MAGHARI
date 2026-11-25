@@ -1,6 +1,7 @@
 using System;
 using System.Collection.Generic;
 using System.Ling;
+using System.Numeric;
 
 class Student
 {
