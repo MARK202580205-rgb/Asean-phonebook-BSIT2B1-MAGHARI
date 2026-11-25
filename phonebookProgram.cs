@@ -100,4 +100,20 @@ class Country
             : "Unknown";
     }
 }
+
+class Program
+{
+    static ASEANPhonebook phonebook = new ASEANPhonebook();
+
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("\n===== ASEAN PHONEBOOK =====");
+            Console.WriteLine("[1] Store to ASEAN phonebook");
+            Console.WriteLine("[2] Edit entry in ASEAN phonebook");
+            Console.WriteLine("[3] Search ASEAN phonebook by country");
+            Console.WriteLine("[4] Exit");
+
+            Console.Write("Enter choice: ");
   
