@@ -395,6 +395,58 @@ class Program
 
         bool allCountries = false;
         int choiceNumber = 1;
+         
+        while (true)
+        {
+            Console.Write($"Enter choice {choiceNumber}: ");
+            string input = Console.ReadLine() ?? "";
+
+            if (!int.TryParse(input, out int choice))
+            {
+                Console.WriteLine("Invalid choice.");
+                continue;
+            }
+
+            if (choice == 0)
+            {
+                break;
+            }
+
+            if (choice == 6)
+            {
+                allCountries = true;
+                break;
+            }
+
+            switch (choice)
+            {
+                case 1:
+                    selectedCountries.Add(63);
+                    break;
+
+                case 2:
+                    selectedCountries.Add(66);
+                    break;
+
+                case 3:
+                    selectedCountries.Add(65);
+                    break;
+
+                case 4:
+                    selectedCountries.Add(62);
+                    break;
+
+                case 5:
+                    selectedCountries.Add(60);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    continue;
+            }
+
+            choiceNumber++;
+        }
 
 
             
