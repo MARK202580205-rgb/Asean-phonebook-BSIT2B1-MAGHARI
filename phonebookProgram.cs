@@ -447,6 +447,43 @@ class Program
 
             choiceNumber++;
         }
+       List<Student> results;
+
+        if (allCountries)
+        {
+            results = phonebook.GetAllStudents();
+            Console.WriteLine("\nHere are all the students:");
+        }
+        else if (selectedCountries.Count > 0)
+        {
+            results = phonebook.SearchByCountry(selectedCountries);
+
+            Console.WriteLine("\nHere are the students from:");
+
+            foreach (int code in selectedCountries)
+            {
+                Console.WriteLine(Country.GetCountryName(code));
+            }
+        }
+        else
+        {
+            Console.WriteLine("No country selected.");
+            return;
+        }
+
+        if (results.Count == 0)
+        {
+            Console.WriteLine("No students found.");
+            return;
+        }
+
+        foreach (Student student in results)
+        {
+            student.Display();
+        }
+    }
+}
+
 
 
             
