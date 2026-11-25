@@ -3,6 +3,7 @@ using System.Collection.Generic;
 using System.Linq;
 using System.Numeric;
 
+// CLASS 1: STUDENT
 class Student
 {
   public string StudentNumber { get; set;}
@@ -37,7 +38,7 @@ class Student
             $"{AreaCode}-{PhoneNumber}");
     }
 }
-
+// CLASS 2: ASEAN PHONEBOOK
 class ASEANPhonebook
 {
     private List<Student> students = new List<Student>();
