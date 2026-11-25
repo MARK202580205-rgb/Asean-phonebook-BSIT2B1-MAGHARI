@@ -1,5 +1,5 @@
 using System;
-using System.Collection.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 // CLASS 1: STUDENT
@@ -31,10 +31,10 @@ class Student
     public void Display()
     {
       Console.WriteLine(
-        $"{Surname}, {Firstname}, with student number" +
-          $"{StudentNumber}, is a {Occupation}. " +
-            $"His/Her phone number is {CountryCode}-" +
-            $"{AreaCode}-{PhoneNumber}");
+       $"{Surname}, {FirstName}, with student number " +
+       $"{StudentNumber}, is a {Occupation}. " +
+       $"His/Her phone number is {CountryCode}-" +
+       $"{AreaCode}-{PhoneNumber}");
     }
 }
 // CLASS 2: ASEAN PHONEBOOK
