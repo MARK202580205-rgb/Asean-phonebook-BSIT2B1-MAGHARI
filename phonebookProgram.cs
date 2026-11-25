@@ -208,6 +208,59 @@ class Program
                     break;
                 }
             }
+           Console.Write("Enter surname: ");
+            string surname = Console.ReadLine() ?? "";
+
+            Console.Write("Enter first name: ");
+            string firstName = Console.ReadLine() ?? "";
+
+            Console.Write("Enter occupation: ");
+            string occupation = Console.ReadLine() ?? "";
+
+            string gender;
+
+            while (true)
+            {
+                Console.Write("Enter gender (M for male, F for female): ");
+                gender = (Console.ReadLine() ?? "").ToUpper();
+
+                if (gender == "M" || gender == "F")
+                {
+                    break;
+                }
+
+                Console.WriteLine("Invalid gender. Please enter M or F.");
+            }
+
+            int countryCode = ReadValidCountryCode("Enter country code: ");
+
+            Console.Write("Enter area code: ");
+            string areaCode = Console.ReadLine() ?? "";
+
+            Console.Write("Enter number: ");
+            string phoneNumber = Console.ReadLine() ?? "";
+
+            Student student = new Student(
+                studentNumber,
+                surname,
+                firstName,
+                occupation,
+                gender,
+                countryCode,
+                areaCode,
+                phoneNumber
+            );
+
+            phonebook.AddStudent(student);
+
+            Console.WriteLine("\nStudent successfully added!");
+
+            Console.Write("Do you want to enter another entry [Y/N]? ");
+            again = (Console.ReadLine() ?? "").ToUpper();
+
+        } while (again == "Y");
+    }
+
 
             
 
