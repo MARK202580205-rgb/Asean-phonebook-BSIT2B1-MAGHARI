@@ -51,5 +51,11 @@ class ASEANPhonebook
         return students.FirstOrDefault(
             s => s.StudentNumber == studentNumber);
     }
+  
+    public bool StudentNumberExists(int studentNumber)
+    {
+        return students.Any(
+            s => s.StudentNumber == studentNumber);
+    }
 
   
