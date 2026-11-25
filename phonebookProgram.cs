@@ -116,4 +116,7 @@ class Program
             Console.WriteLine("[4] Exit");
 
             Console.Write("Enter choice: ");
+            string choice = Console.ReadLine() ?? "";
+          
+
   
