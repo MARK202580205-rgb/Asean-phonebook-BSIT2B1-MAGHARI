@@ -46,5 +46,10 @@ class ASEANPhonebook
     {
         students.Add(student);
     }
+   public Student FindStudent(string studentNumber)
+    {
+        return students.FirstOrDefault(
+            s => s.StudentNumber == studentNumber);
+    }
 
   
