@@ -147,9 +147,9 @@ class Program
      {
         while (true)
         {
-            Console.WriteLine(prompt);
+            Console.Write(prompt);
 
-            if (int.TryParsr(Console.ReadLine(), out int number))
+            if (int.TryParse(Console.ReadLine(), out int number))
             {
                 return number;
             }
