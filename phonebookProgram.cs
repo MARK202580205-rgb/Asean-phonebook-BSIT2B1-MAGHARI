@@ -297,6 +297,84 @@ class Program
 
             Console.Write("Enter choice: ");
             string choice = Console.ReadLine() ?? "";
+
+           switch (choice)
+            {
+                case "1":
+                    Console.Write("Enter new student number: ");
+                    string newNumber = Console.ReadLine() ?? "";
+
+                    if (string.IsNullOrWhiteSpace(newNumber))
+                    {
+                        Console.WriteLine("Student number cannot be empty.");
+                    }
+                    else if (newNumber != student.StudentNumber &&
+                             phonebook.StudentNumberExists(newNumber))
+                    {
+                        Console.WriteLine("Student number already exists.");
+                    }
+                    else
+                    {
+                        student.StudentNumber = newNumber;
+                        Console.WriteLine("Student number updated!");
+                    }
+                    break;
+
+                case "2":
+                    Console.Write("Enter new surname: ");
+                    student.Surname = Console.ReadLine() ?? "";
+                    Console.WriteLine("Surname updated!");
+                    break;
+
+                case "3":
+                    Console.Write("Enter new gender (M/F): ");
+                    string gender = (Console.ReadLine() ?? "").ToUpper();
+
+                    if (gender == "M" || gender == "F")
+                    {
+                        student.Gender = gender;
+                        Console.WriteLine("Gender updated!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid gender.");
+                    }
+                    break;
+
+                case "4":
+                    Console.Write("Enter new occupation: ");
+                    student.Occupation = Console.ReadLine() ?? "";
+                    Console.WriteLine("Occupation updated!");
+                    break;
+
+                case "5":
+                    student.CountryCode = ReadValidCountryCode(
+                        "Enter new country code: ");
+
+                    Console.WriteLine("Country code updated!");
+                    break;
+
+                case "6":
+                    Console.Write("Enter new area code: ");
+                    student.AreaCode = Console.ReadLine() ?? "";
+                    Console.WriteLine("Area code updated!");
+                    break;
+
+                case "7":
+                    Console.Write("Enter new phone number: ");
+                    student.PhoneNumber = Console.ReadLine() ?? "";
+                    Console.WriteLine("Phone number updated!");
+                    break;
+
+                case "8":
+                    return;
+
+                default:
+                    Console.WriteLine("Invalid choice. Try again.");
+                    break;
+            }
+        }
+    }
        
 
 
