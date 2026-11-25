@@ -52,7 +52,7 @@ class ASEANPhonebook
             s => s.StudentNumber == studentNumber);
     }
   
-    public bool StudentNumberExists(int studentNumber)
+    public bool StudentNumberExists(string studentNumber)
     {
         return students.Any(
             s => s.StudentNumber == studentNumber);
