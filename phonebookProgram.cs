@@ -57,5 +57,21 @@ class ASEANPhonebook
         return students.Any(
             s => s.StudentNumber == studentNumber);
     }
+   public List<Student> SearchByCountry(HashSet<int> countryCodes)
+    {
+        return students
+            .Where(s => countryCodes.Contains(s.CountryCode))
+            .OrderBy(s => s.Surname)
+            .ToList();
+    }
+
+    public List<Student> GetAllStudents()
+    {
+        return students
+            .OrderBy(s => s.Surname)
+            .ToList();
+    }
+}
+
 
   
