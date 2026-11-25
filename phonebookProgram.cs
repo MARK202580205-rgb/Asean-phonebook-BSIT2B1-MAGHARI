@@ -101,6 +101,7 @@ class Country
     }
 }
 
+// Class 4: Program
 class Program
 {
     static ASEANPhonebook phonebook = new ASEANPhonebook();
@@ -117,6 +118,31 @@ class Program
 
             Console.Write("Enter choice: ");
             string choice = Console.ReadLine() ?? "";
+
+             switch (choice)
+            {
+                case "1":
+                    StoreStudent();
+                    break;
+
+                case "2":
+                    EditStudent();
+                    break;
+
+                case "3":
+                    SearchStudents();
+                    break;
+
+                case "4":
+                    Console.WriteLine("Thank you for using ASEAN Phonebook!");
+                    return;
+
+                default:
+                    Console.WriteLine("Invalid option. Please try again.");
+                    break;
+            }
+        }
+    }
           
 
   
