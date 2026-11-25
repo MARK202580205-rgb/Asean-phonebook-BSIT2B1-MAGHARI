@@ -144,6 +144,20 @@ class Program
         }
     }
    private static int ReadInt(string prompt)
+     {
+        while (true)
+        {
+            Console.WriteLine(prompt);
+
+            if (int.TryParsr(Console.ReadLine(), out int number))
+            {
+                return number;
+            }
+
+            Console.WriteLine("Invalid input. Please enter a number.");
+        }
+    }
+
           
 
   
