@@ -1,7 +1,6 @@
 using System;
 using System.Collection.Generic;
 using System.Linq;
-using System.Numeric;
 
 // CLASS 1: STUDENT
 class Student
